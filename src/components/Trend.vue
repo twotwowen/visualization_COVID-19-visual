@@ -6,6 +6,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -36,7 +37,7 @@ export default {
       }
     },
     initChart() {
-      this.chartsInstance = this.$echarts.init(this.$refs.trend_ref,'chalk')
+      this.chartsInstance = this.$echarts.init(this.$refs.trend_ref,'dark')
       const initOption = {
         title: {
           text: '近期本土病例有所增加省份现有确诊病例',

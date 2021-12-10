@@ -12,6 +12,7 @@
 <script>
 import axios from 'axios'
 import {getProvinceMapInfo} from '../utils/map_utils'
+
 export default {
   data() {
     return {
@@ -58,7 +59,7 @@ export default {
       }
     },
     async initChart() {
-      this.chartsInstance = this.$echarts.init(this.$refs.map_ref,'chalk')
+      this.chartsInstance = this.$echarts.init(this.$refs.map_ref,'dark')
       // const ret = await axios.get('http://localhost:8080/static/map/china.json')
       // this.$echarts.registerMap('china',ret.data)
       const ret = await axios.get('http://localhost:8080/static/map/china.json')

@@ -39,7 +39,7 @@ export default {
       this.startInterval()
     },
     initChart() {
-      this.chartsInstance = this.$echarts.init(this.$refs.foreignList_ref,'chalk')
+      this.chartsInstance = this.$echarts.init(this.$refs.foreignList_ref,'dark')
       const initOption = {
         title: {
           text: '海外各国疫情数据统计',

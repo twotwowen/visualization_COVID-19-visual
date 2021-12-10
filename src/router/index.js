@@ -3,6 +3,10 @@ import VueRouter from 'vue-router'
 import MapPage from '../views/MapPage.vue'
 import ForeignListPage from '../views/ForeignListPage.vue'
 import TrendPage from '../views/TrendPage.vue'
+import RatePage from '../views/RatePage.vue'
+import ChinaDayPage from '../views/ChinaDayPage.vue'
+import CountPage from '../views/CountPage.vue'
+import RegionalRiskPage from '../views/RegionalRiskPage.vue'
 
 
 Vue.use(VueRouter)
@@ -19,6 +23,22 @@ const routes = [
   {
     path: '/trendpage',
     component: TrendPage
+  },
+  {
+    path: '/ratepage',
+    component: RatePage
+  },
+  {
+    path: '/chinadaypage',
+    component: ChinaDayPage
+  },
+  {
+    path: '/countpage',
+    component: CountPage
+  },
+  {
+    path: '/regionalriskpage',
+    component: RegionalRiskPage
   }
   // {
   //   path: '/about',
