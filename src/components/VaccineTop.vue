@@ -27,11 +27,12 @@ export default {
       this.chartsInstance = this.$echarts.init(this.$refs.vaccineTop_ref)
       const initOption = {
         backgroundColor: 'rgba(16,38,120,0.4)',
-        title: {
-          text: '各个国家疫苗接种总数量展现',
-          top: 20,
-          left: 20
-        }
+        // title: {
+        //   text: '各个国家疫苗接种总数量展现',
+        //   top: 20,
+        //   left: 20
+        // }
+       
       }
       this.chartsInstance.setOption(initOption)
     },
@@ -50,10 +51,11 @@ export default {
         }
       })
       const dataOption = {
-        legend: {
-          top: 'bottom'
-        },
-          tooltip: {
+        // legend: {
+        //   top: 'bottom'
+        // },
+       
+        tooltip: {
           trigger: 'item',
           formatter: '{a} <br/>{b} : {c} ({d}%)'
         },
@@ -61,13 +63,19 @@ export default {
           {
             name: '疫苗接种数量',
             type: 'pie',
-            radius: [50, 200],
-            center: ['50%', '50%'],
-            roseType: 'area',
+            radius: '70%',
+            center: ['50%', '60%'],
+            // roseType: 'radius',
             itemStyle: {
               borderRadius: 7
             },
-            data: seriesArrData
+            data: seriesArrData,
+            label: {
+              position: 'inside'
+            },
+            labelLine: {
+              show: false
+            }
           }
         ]
       }

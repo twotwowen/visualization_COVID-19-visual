@@ -38,6 +38,13 @@ export default {
       this.chartsInstance = this.$echarts.init(this.$refs.chinaday_ref)
       const initOption = {
         backgroundColor: 'rgba(16,38,120,0.4)',
+        grid: {
+          top: '30%',
+          left: '3%',
+          right: '6%',
+          bottom: '3%',
+          containLabel: true  //距离包含坐标轴上面的文字
+        },
         tooltip: {
           trigger: 'item',
           axisPointer: {
@@ -48,7 +55,7 @@ export default {
           type: 'category',
           axisLine: {
             lineStyle: {
-              color: '#ccc'
+              color: '#fff'
             }
           }
         },
@@ -57,18 +64,18 @@ export default {
           splitLine: { show: false },
           axisLine: {
             lineStyle: {
-              color: '#ccc'
+              color: '#fff'
             }
           }
         },
         dataZoom : [
           {
-            show: true,
+            show: false,
             start: 75,
             end: 100,
-            textStyle: {
-              color: '#fff'
-            }
+            // textStyle: {
+            //   color: '#fff'
+            // }
           },
           {
             type: 'inside'
@@ -111,7 +118,10 @@ export default {
         legend: {
           data: ['本土新增病例','无症状感染者','本土现有确诊病例'],
           icon: 'diamond',
-          top: '10%'
+          top: '15%',
+          textStyle: {
+            color: '#fff'
+          }
         },
         series: [
           {

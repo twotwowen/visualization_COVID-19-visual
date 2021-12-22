@@ -43,7 +43,7 @@ export default {
           pointer: {
             show: false
           },
-          radius: '45%',
+          radius: '40%',
           progress: {
             show: true,
             overlap: false,
@@ -89,12 +89,11 @@ export default {
 
       const initOption = {
         backgroundColor: 'rgba(16,38,120,0.4)',
-        title: {
-          text: '全球/国内/国际新冠疫情---治愈率，死亡率',
-          top: 20,
-          left: 20
-        },
-       
+        // title: {
+        //   text: '全球/国内/国际新冠疫情---治愈率，死亡率',
+        //   top: 20,
+        //   left: 20
+        // },
         series: [
           seriesInit,
           seriesInit,
@@ -110,15 +109,15 @@ export default {
       //国内
       this.domestic.healRate =((ret.domesticStatistics.curedCount / ret.domesticStatistics.confirmedCount) * 100).toFixed(2)
       this.domestic.deadRate = ((ret.domesticStatistics.deadCount / ret.domesticStatistics.confirmedCount) * 100).toFixed(2)
-      console.log(this.domestic);
+      // console.log(this.domestic);
       //全球
       this.global.healRate =((ret.globalStatistics.curedCount / ret.globalStatistics.confirmedCount) * 100).toFixed(2)
       this.global.deadRate = ((ret.globalStatistics.deadCount / ret.globalStatistics.confirmedCount) * 100).toFixed(2)
-      console.log(this.global);
+      // console.log(this.global);
       //国际
       this.international.healRate =((ret.internationalStatistics.curedCount / ret.internationalStatistics.confirmedCount) * 100).toFixed(2)
       this.international.deadRate = ((ret.internationalStatistics.deadCount / ret.internationalStatistics.confirmedCount) * 100).toFixed(2)
-      console.log(this.international);
+      // console.log(this.international);
       this.updateChart()
     },
     updateChart() {
@@ -127,24 +126,24 @@ export default {
           value: this.domestic.healRate,
           name: 'HealRate',
           title: {
-            offsetCenter: ['0%', '-40%'],
+            offsetCenter: ['0%', '-210%'],
             color: '#fff'
           },
           detail: {
             valueAnimation: true,
-            offsetCenter: ['0%', '-20%']
+            offsetCenter: ['0%', '-180%']
           }
         },
         {
           value: this.domestic.deadRate,
           name: 'DeadRate',
           title: {
-            offsetCenter: ['0%', '10%'],
+            offsetCenter: ['0%', '-150%'],
             color: '#fff'
           },
           detail: {
             valueAnimation: true,
-            offsetCenter: ['0%', '30%']
+            offsetCenter: ['0%', '-120%']
           }
         }
       ]
@@ -153,24 +152,24 @@ export default {
           value: this.global.healRate,
           name: 'HealRate',
           title: {
-            offsetCenter: ['0%', '-40%'],
+            offsetCenter: ['0%', '-210%'],
             color: '#fff'
           },
           detail: {
             valueAnimation: true,
-            offsetCenter: ['0%', '-20%']
+            offsetCenter: ['0%', '-180%']
           }
         },
         {
           value: this.global.deadRate,
           name: 'DeadRate',
           title: {
-            offsetCenter: ['0%', '10%'],
+            offsetCenter: ['0%', '-150%'],
             color: '#fff'
           },
           detail: {
             valueAnimation: true,
-            offsetCenter: ['0%', '30%']
+            offsetCenter: ['0%', '-120%']
           }
         }
       ]
@@ -179,24 +178,24 @@ export default {
           value: this.international.healRate,
           name: 'HealRate',
           title: {
-            offsetCenter: ['0%', '-40%'],
+            offsetCenter: ['0%', '-210%'],
             color: '#fff'
           },
           detail: {
             valueAnimation: true,
-            offsetCenter: ['0%', '-20%']
+            offsetCenter: ['0%', '-180%']
           }
         },
         {
           value: this.international.deadRate,
           name: 'DeadRate',
           title: {
-            offsetCenter: ['0%', '10%'],
+            offsetCenter: ['0%', '-150%'],
             color: '#fff'
           },
           detail: {
             valueAnimation: true,
-            offsetCenter: ['0%', '30%']
+            offsetCenter: ['0%', '-120%']
           }
         }
       ]
@@ -206,17 +205,17 @@ export default {
           {
             // name: 'domestic',
             data: gaugeData1,
-            center: ['20%','50%']
+            center: ['20%','65%']
           },
           {
             // name: 'global',
             data: gaugeData2,
-            center: ['50%','50%']
+            center: ['50%','65%']
           },
           {
             // name: 'international',
             data: gaugeData3,
-            center: ['80%','50%']
+            center: ['80%','65%']
           }
         ],
         // legend: {}
@@ -241,7 +240,7 @@ export default {
 .subTitle{
   position: absolute;
   display: flex;
-  bottom: 30px;
+  bottom: 5px;
   width: 100%;
   color: #fff;
   justify-content: space-around;

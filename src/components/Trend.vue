@@ -40,20 +40,32 @@ export default {
       this.chartsInstance = this.$echarts.init(this.$refs.trend_ref)
       const initOption = {
         backgroundColor: 'rgba(16,38,120,0.4)',
-        title: {
-          text: '近期本土病例有所增加省份现有确诊病例',
-          left: 20,
-          top: 20
-        },
+        // title: {
+        //   text: '近期本土病例有所增加省份现有确诊病例',
+        //   left: 20,
+        //   top: 20
+        // },
         xAxis: {
-          type: 'category'
+          type: 'category',
+          axisLabel: {
+            textStyle: {
+              color: '#fff'
+            }
+          }
         },
         yAxis: {
-          type: 'value'
+          type: 'value',
+          axisLabel: {
+            textStyle: {
+              color: '#fff'
+            }
+          }
         },
         legend: {
-          
-          top: '10%'
+          textStyle: {
+            color: '#FFF'
+          },
+          top: '15%'
         },
         dataZoom : [
           {
@@ -69,7 +81,7 @@ export default {
           }
         ],
         grid: {
-          top: '20%',
+          top: '25%',
           left: '3%',
           right: '6%',
           bottom: '3%',

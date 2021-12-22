@@ -27,27 +27,40 @@ export default {
       this.chartsInstance = this.$echarts.init(this.$refs.vaccineTrend_ref)
       const initOption = {
         backgroundColor: 'rgba(16,38,120,0.4)',
-         title: {
-          text: '新冠疫苗接种趋势'
-        },
+        //  title: {
+        //   text: '新冠疫苗接种趋势'
+        // },
         tooltip: {
-          trigger: 'axis'
+          trigger: 'item'
         },
-        legend: {
+        // legend: {
           
-        },
+        // },
         grid: {
-          left: '3%',
-          right: '4%',
-          bottom: '3%',
-          containLabel: true
+          top: '16%',
+          // left: '3%',
+          // right: '4%',
+          bottom: '10%',
+          // containLabel: true
         },
         xAxis: {
+          show: true,
           type: 'category',
-          boundaryGap: false
+          boundaryGap: false,
+          axisLabel: {
+            textStyle: {
+              color: '#fff'
+            }
+          }
         },
         yAxis: {
-          type: 'value'
+          show: false,
+          type: 'value',
+          axisLabel: {
+            textStyle: {
+              color: '#fff'
+            }
+          }
         },
        
       }

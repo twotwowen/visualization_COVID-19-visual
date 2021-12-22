@@ -79,7 +79,9 @@ export default {
             }
           }
         },
-       
+        visualMap: {
+          left: 'right'
+        }
       }
       this.chartsInstance.setOption(initOption)
             //地图点击之后出现省份小地图
@@ -129,13 +131,14 @@ export default {
           },
           series: [
             {
-              data: dataArr
+              data: dataArr,
             }
           ],
           visualMap: {
             min: 0,
             max: 100,
-            range: [1,100]
+            range: [1,100],
+            
           }
         }
         this.chartsInstance.setOption(changeOption)
@@ -207,7 +210,20 @@ export default {
           realtime: false,
           calculable: true,
           inRange: {
-            color: ['#6699CC', '#006699','#003366' ]
+            // color: ['#6699CC', '#006699','#003366' ]
+            color: [
+              '#313695',
+              '#4575b4',
+              '#74add1',
+              '#abd9e9',
+              '#e0f3f8',
+              '#ffffbf',
+              '#fee090',
+              '#fdae61',
+              '#f46d43',
+              '#d73027',
+              '#a50026'
+            ]
           },
           textStyle: {
             color: '#fff'
@@ -233,17 +249,17 @@ export default {
 }
 .options {
   position: absolute;
-  top: 31px;
-  left: 64px;
+  top: 40px;
+  left: 20px;
   text-align: center;
   color: #fff;
-  font-size: 20px;
+  font-size: 15px;
 }
 .options span {
   display: inline-block;
-  width: 100px;
-  height: 32px;
-  line-height: 32px;
+  width: 70px;
+  height: 24px;
+  line-height: 24px;
   border: 2px solid #fff;
   border-radius: 20px;
   margin-right: 15px;

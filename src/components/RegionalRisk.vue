@@ -87,11 +87,11 @@ export default {
       this.chartsInstance = this.$echarts.init(this.$refs.regional_ref)
       const initOption = {
         backgroundColor: 'rgba(16,38,120,0.4)',
-        title: {
-          text: '风险地区提示',
-          top: 20,
-          left: 20
-        }
+        // title: {
+        //   text: '风险地区提示',
+        //   top: 20,
+        //   left: 20
+        // }
       }
       this.chartsInstance.setOption(initOption)
     },
@@ -167,21 +167,23 @@ ul,li {
 .com-container {
   position: relative;
 }
+
 .total {
   position: absolute;
   left: 50%;
   // top: 50%;
-  bottom: 10px;
+  bottom: 0;
   transform: translate(-50%);
-  background-color: #100C2A;
+  // background-color: #100C2A;
   width: 280px;
+  // height: 140px;
   // height: 320px;
   // height: 800px;
   padding: 10px;
   color: #fff;
   overflow: hidden;
   .seamless-warp {
-    height: 300px;
+    height: 45px;
     overflow: hidden;
   }
   .high, .middle {
@@ -189,14 +191,14 @@ ul,li {
   }
   .tip {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
   }
   .item {
     margin-bottom: 32px;
     font-size: smaller;
-    box-shadow: 10px 10px 20px #0f375f;
+    box-shadow: 12px 2px 20px #0f375f;
     color: #b4bdeb;
   }
 }

@@ -25,7 +25,7 @@
       <div class="seriousCount">
         <div>
         <span>较上日</span>
-        <span>+33</span>
+        <span>+19</span>
         </div>
         <div class="num">{{domesticStatistics.seriousCount}}</div>
         <div>无症状感染者</div>
@@ -88,12 +88,12 @@ export default {
       this.chartsInstance = this.$echarts.init(this.$refs.count_ref)
       const initOption = {
         backgroundColor: 'rgba(16,38,120,0.4)',
-        title: {
-          text: '国内疫情数据',
-          top: 20,
-          left: 20,
+        // title: {
+        //   text: '国内疫情数据',
+        //   top: 20,
+        //   left: 20,
           
-        }
+        // }
       }
       this.chartsInstance.setOption(initOption)
     },
@@ -110,9 +110,9 @@ export default {
     updateChart() {
       //处理数据
       const dataOption = {
-        title: {
-          subtext: '统计截止至 '+ this.modifyTime
-        }
+        // title: {
+        //   subtext: '统计截止至 '+ this.modifyTime
+        // }
       }
       this.chartsInstance.setOption(dataOption)
     },
@@ -137,21 +137,21 @@ export default {
   transform: translate(-50%,-50%);
   // background-color: #fff;
   
-  background-color: #0F375F;
+  // background-color: #0F375F;
   border-radius: 10px;
-  width: 460px;
-  height: 202px;
+  width: 480px;
+  height: 143px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-content: space-between;
+  align-content: center;
   overflow: hidden;
-  border: 1px solid #0F375F;
+  // border: 1px solid #0F375F;
 }
 .total>div {
-  height: 100px;
-  width: 150px;
-  background-color: #100C2A;
+  height: 65px;
+  width: 125px;
+  // background-color: #100C2A;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,7 +159,7 @@ export default {
   color: #fff;
 }
 .total>div .num {
-  font-size: 30px;
+  font-size: 20px;
 }
 .total>div div:first-child {
   font-size: 12px;
@@ -171,6 +171,6 @@ export default {
   color: #ced1df;
 }
 .total>div div:last-child {
-  font-size: 22px;
+  font-size: 14px;
 }
 </style>

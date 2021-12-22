@@ -56,11 +56,20 @@ export default {
           containLabel: true  //距离包含坐标轴上面的文字
         },
         xAxis: {
-          type: 'category'
-         
+          type: 'category',
+          axisLabel: {
+            textStyle: {
+              color: '#fff'
+            }
+          }
         },
         yAxis: {
-          type: 'value'
+          type: 'value',
+          axisLabel: {
+            textStyle: {
+              color: '#fff'
+            }
+          }
         },
         legend: {
           data: ['新增确诊','累计确诊','治愈病例','死亡病例'],
@@ -68,7 +77,10 @@ export default {
             '新增确诊': false,
             '死亡病例': false
           },
-          top: '8%'
+          top: '8%',
+          textStyle: {
+            color: '#FFF'
+          }
         },
         calculable: true,
         tooltip: {
@@ -213,7 +225,7 @@ export default {
 .iconfont {
   position: absolute;
   color: #fff;
-  top: 8%;
+  top: 22%;
   right: 13%;
   font-size: 30px;
 }
