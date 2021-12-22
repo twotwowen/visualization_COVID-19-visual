@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     initChart() {
-      this.chartsInstance = this.$echarts.init(this.$refs.rate_ref,'dark')
+      this.chartsInstance = this.$echarts.init(this.$refs.rate_ref)
       const seriesInit = 
         {
           type: 'gauge',
@@ -88,6 +88,7 @@ export default {
         }
 
       const initOption = {
+        backgroundColor: 'rgba(16,38,120,0.4)',
         title: {
           text: '全球/国内/国际新冠疫情---治愈率，死亡率',
           top: 20,

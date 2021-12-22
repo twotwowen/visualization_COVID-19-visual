@@ -59,13 +59,14 @@ export default {
       }
     },
     async initChart() {
-      this.chartsInstance = this.$echarts.init(this.$refs.map_ref,'dark')
+      this.chartsInstance = this.$echarts.init(this.$refs.map_ref)
       // const ret = await axios.get('http://localhost:8080/static/map/china.json')
       // this.$echarts.registerMap('china',ret.data)
       const ret = await axios.get('http://localhost:8080/static/map/china.json')
       this.$echarts.registerMap('china',ret.data)
       this.mapType = 'china'
       const initOption = {
+        backgroundColor: 'rgba(16,38,120,0.4)',
         tooltip: {
           trigger: 'item',
           // formatter: '{b}<br/>累计确诊：{c}'

@@ -37,8 +37,9 @@ export default {
       }
     },
     initChart() {
-      this.chartsInstance = this.$echarts.init(this.$refs.trend_ref,'dark')
+      this.chartsInstance = this.$echarts.init(this.$refs.trend_ref)
       const initOption = {
+        backgroundColor: 'rgba(16,38,120,0.4)',
         title: {
           text: '近期本土病例有所增加省份现有确诊病例',
           left: 20,

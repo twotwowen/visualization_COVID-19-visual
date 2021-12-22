@@ -85,8 +85,9 @@ export default {
   },
   methods: {
     initChart() {
-      this.chartsInstance = this.$echarts.init(this.$refs.count_ref,'dark')
+      this.chartsInstance = this.$echarts.init(this.$refs.count_ref)
       const initOption = {
+        backgroundColor: 'rgba(16,38,120,0.4)',
         title: {
           text: '国内疫情数据',
           top: 20,

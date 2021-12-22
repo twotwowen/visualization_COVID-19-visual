@@ -84,8 +84,9 @@ export default {
   },
   methods: {
     initChart() {
-      this.chartsInstance = this.$echarts.init(this.$refs.regional_ref,'dark')
+      this.chartsInstance = this.$echarts.init(this.$refs.regional_ref)
       const initOption = {
+        backgroundColor: 'rgba(16,38,120,0.4)',
         title: {
           text: '风险地区提示',
           top: 20,
@@ -175,7 +176,7 @@ ul,li {
   background-color: #100C2A;
   width: 280px;
   // height: 320px;
-  height: 800px;
+  // height: 800px;
   padding: 10px;
   color: #fff;
   overflow: hidden;

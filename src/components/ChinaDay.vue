@@ -35,8 +35,9 @@ export default {
       }
     },
     initChart() {
-      this.chartsInstance = this.$echarts.init(this.$refs.chinaday_ref,'dark')
+      this.chartsInstance = this.$echarts.init(this.$refs.chinaday_ref)
       const initOption = {
+        backgroundColor: 'rgba(16,38,120,0.4)',
         tooltip: {
           trigger: 'item',
           axisPointer: {

@@ -8,8 +8,13 @@ import './assets/css/iconfont.css'
 import axios from 'axios'
 import * as echarts from 'echarts'
 
+//引入element-ui
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
+
 // 请求基准路径的配置
-axios.defaults.baseURL = 'http://127.0.0.1:8888/api/'
+// axios.defaults.baseURL = 'http://127.0.0.1:8888/api/'
 // 将axios挂载到原型
 Vue.prototype.$axios = axios
 

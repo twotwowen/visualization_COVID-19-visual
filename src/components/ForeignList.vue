@@ -39,14 +39,15 @@ export default {
       this.startInterval()
     },
     initChart() {
-      this.chartsInstance = this.$echarts.init(this.$refs.foreignList_ref,'dark')
+      this.chartsInstance = this.$echarts.init(this.$refs.foreignList_ref)
       const initOption = {
-        title: {
-          text: '海外各国疫情数据统计',
-          subtext: '数据来自腾讯新闻',
-          left: 20,
-          top: 20
-        },
+        backgroundColor: 'rgba(16,38,120,0.4)',
+        // title: {
+        //   text: '海外各国疫情数据统计',
+        //   subtext: '数据来自腾讯新闻',
+        //   left: 20,
+        //   top: 20
+        // },
         grid: {
           top: '20%',
           left: '3%',

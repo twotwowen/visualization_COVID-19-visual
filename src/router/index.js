@@ -7,11 +7,24 @@ import RatePage from '../views/RatePage.vue'
 import ChinaDayPage from '../views/ChinaDayPage.vue'
 import CountPage from '../views/CountPage.vue'
 import RegionalRiskPage from '../views/RegionalRiskPage.vue'
+import VaccineTopPage from '../views/VaccineTopPage.vue'
+import VaccineTrendPage from '../views/VaccineTrendPage.vue'
+import CountDown from '../views/CountDown.vue'
+
+import ScreenPage from '../views/ScreenPage.vue'
 
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/',
+    redirect: '/screenpage'
+  },
+  {
+    path: '/screenpage',
+    component: ScreenPage
+  },
   {
     path: '/mappage',
     component: MapPage
@@ -39,6 +52,18 @@ const routes = [
   {
     path: '/regionalriskpage',
     component: RegionalRiskPage
+  },
+  {
+    path: '/vaccinetoppage',
+    component: VaccineTopPage
+  },
+  {
+    path: '/vaccinetrendpage',
+    component: VaccineTrendPage
+  },
+  {
+    path: '/countdown',
+    component: CountDown
   }
   // {
   //   path: '/about',
