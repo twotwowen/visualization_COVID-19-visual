@@ -25,7 +25,7 @@
       <div class="seriousCount">
         <div>
         <span>较上日</span>
-        <span>+19</span>
+        <span>+26</span>
         </div>
         <div class="num">{{domesticStatistics.seriousCount}}</div>
         <div>无症状感染者</div>
